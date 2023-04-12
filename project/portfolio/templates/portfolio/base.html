@@ -8,10 +8,24 @@
 </head>
 <body>
 
-<header>
-    <div class="logo">
-        <a href="{% url 'home' %}"><img class="graf_logo" src="{% static 'portfolio/logo.png' %}" alt=""></a>
+<!--<div class="wrap contact">-->
+<!--    <div class="logo">-->
+<!--        <a href="">+79999999999</a>-->
+<!--    </div>-->
+<!--</div>-->
+
+<div class="header">
+    <div class="wrap">
+        <div class="logo">
+            <a href="{% url 'home' %}"><img class="graf_logo" src="{% static 'portfolio/logo.png' %}" alt=""></a>
+            <div class="login">
+                <button class="top">Авторизация</button>
+            </div>
+        </div>
     </div>
+</div>
+
+<header>
     <nav>
         <div class="topnav" id="myNav">
             <a href="#">Главная</a>

@@ -17,13 +17,45 @@ li{
 body{
     font-family: 'Roboto', sans-serif;
 }
+
+.wrap{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+
 .logo{
     background: #A48E80;
     width: 100%;
     display: flex;
-    justify-content: center;
-    box-shadow: 0 2px 12px 2px #A48E80;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    box-shadow: 0 2px 12px 0 #A48E80;
+    border-radius: 0 0 5px 5px;
     box-sizing: border-box;
+}
+.login{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-left: 15px;
+}
+
+.top{
+    padding: 4px 24px;
+    margin-top: 0;
+    background: transparent;
+    border: none;
+    color: black;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.top:hover{
+    background: #C7BDB2;
 }
 .graf_logo{
     padding: 5px;
@@ -52,12 +84,7 @@ nav{
 .topnav .icon{
     display: none;
 }
-.wrap{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 10px 30px;
-    box-sizing: border-box;
-}
+
 
 
 @media screen and (max-width: 768px){

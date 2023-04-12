@@ -8,8 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/portfolio/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/portfolio/static/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/portfolio/templates/portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/portfolio/templates/portfolio/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/portfolio/templates/portfolio/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/project/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
