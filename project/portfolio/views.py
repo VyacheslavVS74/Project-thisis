@@ -1,5 +1,11 @@
 from django.shortcuts import render
+from .models import Works
 
 
 def home(request):
-    return render(request, 'portfolio/home.html')
+    works = Works.objects.all()
+    context = {
+        'works': works,
+    }
+
+    return render(request, 'portfolio/home.html', context)

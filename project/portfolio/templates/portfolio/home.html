@@ -1,14 +1,43 @@
-
 {% extends 'portfolio/base.html' %}
 {% load static %}
+
 {% block content %}
-<div class="home_img">
-  <img src="{% static 'portfolio/home_2.jpg' %}" alt="home_img" class="">
-  <div class="text">ДИЗАЙНЕРСКИЕ ОРГАНАЙЗЕРЫ <br>И ПРИНАДЛЕЖНОСТИ ДЛЯ РАБОТЫ</div>
 
 
+
+
+<div class="block">
+  {% for work in works %}
+  {% if work.top_sales.all %}
+  <div class="element">
+    <div>
+      <img src="{{ work.image_1.url }}" alt="image">
+    </div>
+    <div class="text">
+      <h2>{{ work.title }}</h2>
+      <p> <span class="material">Материал:</span> {{ work.material }}</p>
+      <p class="price">{{ work.price }} руб.</p>
+      <div class="btn">
+        <a href="">Подробнее</a>
+      </div>
+      <div class="btn">
+        <a href="">В корзину</a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+</div>
+<div class="block">
+    <div class="btn1">
+    <a href="">Каталог</a>
+  </div>
 </div>
 
+<div class="home_img">
+  <img src="{% static 'portfolio/home_2.jpg' %}" alt="home_img" class="">
+  <div class="text1">СОБСТВЕННОЕ<br>ПРОИЗВОДСТВО</div>
+</div>
 
 <h1>home</h1>
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis tenetur ab eligendi consequatur, impedit nam placeat est amet maiores necessitatibus vero, similique sequi dignissimos, optio incidunt deleniti qui laboriosam facere?
@@ -16,4 +45,5 @@ Animi non delectus placeat quae unde saepe, harum maiores dolor libero doloribus
 Aliquam nam earum laudantium quos hic corporis qui repellat deleniti, quam amet tenetur quisquam, iusto numquam est ipsam delectus, sunt perspiciatis ab totam reiciendis animi recusandae corrupti consequatur. Possimus, ad?
 Laudantium mollitia nemo eos iusto, assumenda quidem ex beatae numquam iste animi eius minus iure adipisci molestias! Iusto laborum possimus commodi nisi ipsam, exercitationem itaque ad odio neque adipisci eveniet?
 Iste, minima in. Modi velit suscipit quaerat omnis, dolores eum vitae iure excepturi. Perferendis cum consectetur facilis quidem modi fugiat esse ipsum, tempora expedita amet, ex sequi rerum repudiandae atque.
+
 {% endblock %}
