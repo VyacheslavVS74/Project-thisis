@@ -3,46 +3,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Главная</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
-<!--<div class="wrap contact">-->
-<!--    <div class="logo">-->
-<!--        <a href="">+79999999999</a>-->
-<!--    </div>-->
-<!--</div>-->
-
-<div class="header">
-    <div class="wrap">
-        <div class="logo">
-            <a href="{% url 'home' %}"><img class="graf_logo" src="{% static 'portfolio/logo.png' %}" alt=""></a>
-            <div class="login">
-                <button class="top">Авторизация</button>
+<div class="wrapper">
+    <header class="header">
+        <a href="#" class="header__logo"><img src="{% static 'portfolio/logo.png' %}" alt=""></a>
+        <div class="header__menu menu">
+            <div class="menu__icon">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
+            <nav class="menu__body">
+                <ul class="menu__list">
+                    <li><a href="#" class="menu__link">Главная</a></li>
+                    <li><a href="#" class="menu__link">Каталог</a></li>
+                    <li><a href="#" class="menu__link">О нас</a></li>
+                    <li><a href="#" class="menu__link">Блог</a></li>
+                    <li><a href="#" class="menu__link">Контакты</a></li>
+                    <li><a href="#" class="menu__link">Аккаунт</a></li>
+                </ul>
+            </nav>
         </div>
-    </div>
+    </header>
+    <main class="page">
+        <section class="page__section">
+            {% block content %}
+            {% endblock %}
+        </section>
+    </main>
 </div>
 
-<header>
-    <nav>
-        <div class="topnav" id="myNav">
-            <a href="#">Главная</a>
-            <a href="#">Каталог</a>
-            <a href="#">О нас</a>
-            <a href="#">Блог</a>
-            <a href="#">Контакты</a>
-            <a id="menu" class="icon" href="#">&#9776;</a>
-        </div>
-    </nav>
-</header>
-<div class="content">
-    <div class="wrap">
-        {% block content %}
-        {% endblock %}
-    </div>
-</div>
+
+
 
 <script src="{% static 'js/script.js' %}"></script>
 </body>
