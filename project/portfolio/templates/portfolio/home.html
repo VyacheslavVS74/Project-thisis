@@ -3,14 +3,11 @@
 
 {% block content %}
 
-
-<div class="block__1">
-  <div class="image"><img src="{% static 'portfolio/home_2.jpg' %}" alt=""></div>
-  <div class="block__1_text">СОБСТВЕННОЕ</div>
-  <div class="block__1_text_1">ПРОИЗВОДСТВО</div>
-</div>
-
+  <div class="hr-text">
+    ПОПУЛЯРНЫЕ <span style="color: #CBB486">МОДЕЛИ</span>
+  </div>
 <div class="block">
+
   {% for work in works %}
   {% if work.top_sales.all %}
   <div class="element">
@@ -38,6 +35,11 @@
   </div>
 </div>
 
+<div class="block__1">
+  <div class="image"><img src="{% static 'portfolio/home_2.jpg' %}" alt=""></div>
+  <div class="block__1_text">СОБСТВЕННОЕ</div>
+  <div class="block__1_text_1">ПРОИЗВОДСТВО</div>
+</div>
 
 
 <h1>home</h1>
