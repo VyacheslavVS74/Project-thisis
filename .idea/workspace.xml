@@ -6,8 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="4e7ac012-d0c8-4a87-a94c-6be77b6996bf" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/project/db.sqlite3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/portfolio/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/portfolio/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/portfolio/static/portfolio/home_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/portfolio/templates/portfolio/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/portfolio/templates/portfolio/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project/portfolio/templates/portfolio/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/portfolio/templates/portfolio/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/portfolio/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/portfolio/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/portfolio/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/portfolio/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

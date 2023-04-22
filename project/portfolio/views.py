@@ -7,5 +7,12 @@ def home(request):
     context = {
         'works': works,
     }
-
     return render(request, 'portfolio/home.html', context)
+
+
+def catalog(request):
+    works = Works.objects.all()
+    context = {
+        'works': works,
+    }
+    return render(request, 'portfolio/catalog.html', context)

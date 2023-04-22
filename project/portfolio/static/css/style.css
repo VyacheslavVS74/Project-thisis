@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 /*--------------------Обнуление, body--------------------*/
 * {
     margin: 0;
@@ -7,12 +7,15 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
+
 body.lock {
     overflow: hidden;
 }
-.wrapper {
+
+.wrapper {    
     min-height: 100%;
 }
+
 .page__section {
     max-width: 1200px;
     margin: 0px auto;
@@ -20,25 +23,28 @@ body.lock {
 
 /*--------------------Обнуление, body--------------------*/
 /*---------------------block__1------------------------ */
-.block__1{
+.block__1 {
     background: #000;
     position: relative;
     text-align: center;
-    color: #746E53;
+    color: #C7BDB2;
     box-sizing: border-box;
     z-index: -1;
 }
-.block__1 img{
+
+.block__1 img {
     width: 100%;
     height: auto;
     opacity: 0.6;
 }
+
 .block__1_text {
     font-size: 60px;
     position: absolute;
     top: 105px;
     left: 100px;
 }
+
 .block__1_text_1 {
     font-size: 60px;
     position: absolute;
@@ -53,6 +59,7 @@ body.lock {
         top: 100px;
         left: 30px;
     }
+
     .block__1_text_1 {
         font-size: 50px;
         position: absolute;
@@ -60,6 +67,7 @@ body.lock {
         left: 50px;
     }
 }
+
 @media (min-width: 640px) and (max-width: 767px) {
     .block__1_text {
         font-size: 45px;
@@ -67,6 +75,7 @@ body.lock {
         top: 80px;
         left: 15px;
     }
+
     .block__1_text_1 {
         font-size: 45px;
         position: absolute;
@@ -74,6 +83,7 @@ body.lock {
         left: 25px;
     }
 }
+
 @media (min-width: 480px) and (max-width: 639px) {
     .block__1_text {
         font-size: 30px;
@@ -81,6 +91,7 @@ body.lock {
         top: 70px;
         left: 15px;
     }
+
     .block__1_text_1 {
         font-size: 30px;
         position: absolute;
@@ -88,6 +99,7 @@ body.lock {
         left: 25px;
     }
 }
+
 @media (min-width: 320px) and (max-width: 479px) {
     .block__1_text {
         font-size: 20px;
@@ -95,6 +107,7 @@ body.lock {
         top: 70px;
         left: 15px;
     }
+
     .block__1_text_1 {
         font-size: 20px;
         position: absolute;
@@ -105,8 +118,21 @@ body.lock {
 
 /*---------------------block__1------------------------ */
 /*--------------------Шапка--------------------*/
+#contact {
+    background: #fff;
+    max-width: 1200px;
+    margin: 0px auto;
+    margin-top: auto;
+    padding: 10px;
+}
+.name {
+    font-size: 45px;
+    font-family: 'Carter One', cursive;
+    text-align: center;
+}
+
 .header {
-    background-color: #B5B4B0;
+    background-color: #CBB486;
     padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -118,14 +144,16 @@ body.lock {
     -ms-flex-align: center;
     align-items: center;
     position: relative;
-    
+
     max-width: 1200px;
     margin: 0px auto;
 }
+
 .header__logo {
     text-decoration: none;
 }
-.header__logo img{
+
+.header__logo img {
     width: 50px;
     padding: 0;
 }
@@ -196,9 +224,11 @@ body.lock {
         transition: all 0.2s;
     }
 }
+
 .menu__body.active {
     left: 0;
 }
+
 .menu__list {
     list-style-type: none;
     display: -webkit-box;
@@ -206,6 +236,7 @@ body.lock {
     display: flex;
     gap: 30px;
 }
+
 @media (max-width: 768px) {
     .menu__list {
         -webkit-box-orient: vertical;
@@ -220,14 +251,17 @@ body.lock {
         overflow: auto;
     }
 }
+
 .menu__link {
     color: #000;
     text-decoration: none;
     font-size: 20px;
 }
+
 .menu__link:hover {
     border-bottom: 3px solid #000;
 }
+
 @media (max-width: 768px) {
     .menu__link {
         display: block;
@@ -235,6 +269,7 @@ body.lock {
         line-height: 70px;
     }
 }
+
 /*--------------------/Меню--------------------*/
 /*--------------------/Page--------------------*/
 
@@ -242,10 +277,11 @@ body.lock {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    background: ;
+    background: #5E4629;
 }
 
-.element, .count {
+.element,
+.count {
     background: whitesmoke;
     border: 6px solid whitesmoke;
     margin: 30px 0;
@@ -279,7 +315,7 @@ body.lock {
 }
 
 .btn a {
-    font-size: 16px;
+    font-size: 18px;
     color: #000;
     padding: 10px 5px;
     text-decoration: none;
@@ -287,7 +323,7 @@ body.lock {
 }
 
 .btn1 a {
-    font-size: 18px;
+    font-size: 20px;
     color: #000;
     padding: 10px 5px;
     text-decoration: none;
@@ -312,13 +348,59 @@ body.lock {
     color: #CBB486;
     font-size: 20px;
 }
-.hr-text{
+
+.hr-text {
     text-align: center;
     color: #000;
     font-size: 60px;
-    background: #fff;
+    background: #5E4629;
     width: 100%;
-    font-family: 'Acrom',Arial,sans-serif;
+    font-family: 'Acrom', Arial, sans-serif;
     padding: 30px 10px;
 }
+/*--------------------/Page--------------------*/
+/*--------------------/footer--------------------*/
+#footer {
+    background: #CBB486;
+    max-width: 1200px;
+    margin: 0px auto;
+    margin-top: auto;
+    padding: 30px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    box-sizing: border-box;
+    padding: 40px auto;
+}
+.col-md-4 {
+    padding: 10px;
+}
 
+.messenger img {
+    width: 40px;
+    margin: 0 10px;
+}
+.mobile {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+.map-marker {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+.mobile:hover, .map-marker:hover {
+    border-bottom: 3px solid #000;
+}
+@media (max-width: 720px){
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+/*--------------------/footer--------------------*/

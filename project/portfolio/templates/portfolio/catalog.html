@@ -1,15 +1,8 @@
 {% extends 'portfolio/base.html' %}
-{% load static %}
 
 {% block content %}
-
-
-<div class="hr-text">
-  ПОПУЛЯРНЫЕ <span style="color: #CBB486">МОДЕЛИ</span>
-</div>
 <div class="block">
   {% for work in works %}
-  {% if work.top_sales.all %}
   <div class="element">
     <div>
       <img src="{{ work.image_1.url }}" alt="image">
@@ -26,19 +19,6 @@
       </div>
     </div>
   </div>
-  {% endif %}
   {% endfor %}
 </div>
-<div class="block">
-    <div class="btn1">
-    <a href="{% url 'catalog' %}">Каталог</a>
-  </div>
-</div>
-<div class="block__1">
-  <div class="image"><img src="{% static 'portfolio/home_2.jpg' %}" alt=""></div>
-  <div class="block__1_text">СОБСТВЕННОЕ</div>
-  <div class="block__1_text_1">ПРОИЗВОДСТВО</div>
-</div>
-
-
 {% endblock %}
