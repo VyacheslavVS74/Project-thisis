@@ -1,6 +1,15 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
+<div class="section__search">
+  <form class="form" action="{% url 'catalog' %}" method="get">
+    <div class="form__field">
+      <input class="input__text" type="text" name="search_query" value="{{search_query}}" placeholder=" Введите запрос..."/>
+      <input class="search__btn" type="submit" value="Поиск"/>
+    </div>
+  </form>
+</div>
+
 <div class="block">
   {% for work in works %}
   <div class="element">

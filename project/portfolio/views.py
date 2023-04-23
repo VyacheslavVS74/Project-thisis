@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import Works
+from .utils import search_works
 
 
 def home(request):
@@ -11,8 +12,9 @@ def home(request):
 
 
 def catalog(request):
-    works = Works.objects.all()
+    works, search_query = search_works(request)
     context = {
         'works': works,
+        'search_query': search_query,
     }
     return render(request, 'portfolio/catalog.html', context)

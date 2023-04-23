@@ -366,6 +366,7 @@ body.lock {
     margin: 0px auto;
     margin-top: auto;
     padding: 30px;
+
 }
 .row {
     display: flex;
@@ -404,3 +405,28 @@ body.lock {
     }
 }
 /*--------------------/footer--------------------*/
+.section__search {
+    background: #5E4629;
+}
+.form__field {
+    text-align: center;
+}
+.input__text {
+    width: 250px;
+    height: 40px;
+    margin: 15px 10px 0 0;
+    background: #fff;
+    border: #fff;
+    font-style: italic;
+    border-radius: 5px;
+    padding: 0 0 0 7px;
+}
+.search__btn {
+    background: #CBB486;
+    padding: 12px 10px;
+    border-radius: 5px;
+    font-style: italic; 
+}
+.search__btn:hover {
+    background: #a89773;
+}
