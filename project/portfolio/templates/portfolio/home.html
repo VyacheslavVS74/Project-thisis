@@ -4,60 +4,63 @@
 {% block content %}
 
 
-<div class="hr-text">
-  ПОПУЛЯРНЫЕ <span style="color: #CBB486">МОДЕЛИ</span>
-</div>
-<div class="block">
-  {% for work in works %}
-  {% if work.top_sales.all %}
-  <div class="element">
-    <div>
-      <img src="{{ work.image_1.url }}" alt="image">
-    </div>
-    <div class="text">
-      <h2>{{ work.title }}</h2>
-      <p> <span class="material">Материал:</span> {{ work.material }}</p>
-      <p class="price">{{ work.price }} руб.</p>
-      <div class="btn">
-        <a href="">Подробнее</a>
-      </div>
-      <div class="btn">
-        <a href="">В корзину</a>
-      </div>
-    </div>
-  </div>
-  {% endif %}
-  {% endfor %}
-</div>
-<div class="block">
-    <div class="btn1">
-    <a href="{% url 'catalog' %}">Каталог</a>
-  </div>
-</div>
-<div class="block__1">
-  <div class="image"><img src="{% static 'portfolio/home_2.jpg' %}" alt=""></div>
-  <div class="block__1_text">СОБСТВЕННОЕ</div>
-  <div class="block__1_text_1">ПРОИЗВОДСТВО</div>
-</div>
-
-<div id="footer">
+<section class="model">
   <div class="container">
-    <div class="row">
-      <div class="col-md-4">
-        <a href="#" class="map-marker">Челябинск, Челябинский пр. 165</a>
-      </div>
-      <div class="col-md-4">
-        <p>
-          <a href="#" class="messenger"><img src="{% static 'portfolio/vk.png' %}" alt=""></a>
-          <a href="#" class="messenger"><img src="{% static 'portfolio/telegram.png' %}" alt=""></a>
-          <a href="#" class="messenger"><img src="{% static 'portfolio/instagram.png' %}" alt=""></a>
-        </p>
-      </div>
-      <div class="col-md-4">
-        <a href="tel:+79999999999" class="mobile">+7 (999) 999-99-99</a>
-      </div>
+    <div class="hr-text">
+      ПОПУЛЯРНЫЕ <span style="color: #CBB486">МОДЕЛИ</span>
     </div>
   </div>
-</div>
+</section>
+
+<!--<div class="hr-text">-->
+<!--  ПОПУЛЯРНЫЕ <span style="color: #CBB486">МОДЕЛИ</span>-->
+<!--</div>-->
+<section class="block__works">
+  <div class="container">
+    <div class="works">
+      {% for work in works %}
+      {% if work.top_sales.all %}
+      <div class="element">
+        <div>
+          <img src="{{ work.image_1.url }}" alt="image">
+        </div>
+        <div class="text">
+          <h2>{{ work.title }}</h2>
+          <p><span class="material">Материал:</span> {{ work.material }}</p>
+          <p class="price">{{ work.price }} руб.</p>
+          <div class="btn">
+            <a href="">Подробнее</a>
+          </div>
+          <div class="btn">
+            <a href="">В корзину</a>
+          </div>
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="block__catalog__btn">
+  <div class="container">
+    <div class="btn1">
+      <a href="{% url 'catalog' %}">Каталог</a>
+    </div>
+  </div>
+</section>
+
+<section class="block__fon">
+  <div class="container">
+    <div class="image"><img src="{% static 'portfolio/home_2.jpg' %}" alt="">
+      <div class="block__1_text">СОБСТВЕННОЕ</div>
+      <div class="block__1_text_1">ПРОИЗВОДСТВО</div>
+    </div>
+
+  </div>
+</section>
+
+
+
 
 {% endblock %}

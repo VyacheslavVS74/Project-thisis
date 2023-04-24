@@ -1,33 +1,40 @@
 {% extends 'portfolio/base.html' %}
 
 {% block content %}
-<div class="section__search">
-  <form class="form" action="{% url 'catalog' %}" method="get">
-    <div class="form__field">
-      <input class="input__text" type="text" name="search_query" value="{{search_query}}" placeholder=" Введите запрос..."/>
-      <input class="search__btn" type="submit" value="Поиск"/>
-    </div>
-  </form>
-</div>
+<section class="block__search">
+  <div class="container">
+    <form class="form" action="{% url 'catalog' %}" method="get">
+      <div class="form__field">
+        <input class="input__text" type="text" name="search_query" value="{{search_query}}"
+               placeholder=" Введите запрос..."/>
+        <input class="search__btn" type="submit" value="Поиск"/>
+      </div>
+    </form>
+  </div>
+</section>
 
-<div class="block">
-  {% for work in works %}
-  <div class="element">
-    <div>
-      <img src="{{ work.image_1.url }}" alt="image">
-    </div>
-    <div class="text">
-      <h2>{{ work.title }}</h2>
-      <p> <span class="material">Материал:</span> {{ work.material }}</p>
-      <p class="price">{{ work.price }} руб.</p>
-      <div class="btn">
-        <a href="">Подробнее</a>
+<section class="block__works">
+  <div class="container">
+    <div class="works">
+      {% for work in works %}
+      <div class="element">
+        <div>
+          <img src="{{ work.image_1.url }}" alt="image">
+        </div>
+        <div class="text">
+          <h2>{{ work.title }}</h2>
+          <p><span class="material">Материал:</span> {{ work.material }}</p>
+          <p class="price">{{ work.price }} руб.</p>
+          <div class="btn">
+            <a href="">Подробнее</a>
+          </div>
+          <div class="btn">
+            <a href="">В корзину</a>
+          </div>
+        </div>
       </div>
-      <div class="btn">
-        <a href="">В корзину</a>
-      </div>
+      {% endfor %}
     </div>
   </div>
-  {% endfor %}
-</div>
+</section>
 {% endblock %}

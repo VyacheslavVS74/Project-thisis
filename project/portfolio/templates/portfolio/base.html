@@ -9,40 +9,59 @@
 <body>
 <div class="wrapper">
     <div id="contact">
-        <div class="container">
-
-                <div class="title">
-                    <h1 class="name">ProMast</h1>
-                </div>
-
+        <div class="title">
+            <h1 class="name">ProMast</h1>
         </div>
     </div>
     <header class="header">
-        <a href="{% url 'home' %}" class="header__logo"><img src="{% static 'portfolio/logo.png' %}" alt=""></a>
-        <div class="header__menu menu">
-            <div class="menu__icon">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="container">
+            <div class="header__row">
+                <a href="{% url 'home' %}" class="header__logo"><img src="{% static 'portfolio/logo.png' %}" alt=""></a>
+                <div class="header__menu menu">
+                    <div class="menu__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a href="{% url 'home' %}" class="menu__link">Главная</a></li>
+                            <li><a href="{% url 'catalog' %}" class="menu__link">Каталог</a></li>
+                            <li><a href="#" class="menu__link">О нас</a></li>
+                            <li><a href="#" class="menu__link">Блог</a></li>
+                            <li><a href="#" class="menu__link">Контакты</a></li>
+                            <li><a href="#" class="menu__link">Аккаунт</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
-            <nav class="menu__body">
-                <ul class="menu__list">
-                    <li><a href="{% url 'home' %}" class="menu__link">Главная</a></li>
-                    <li><a href="{% url 'catalog' %}" class="menu__link">Каталог</a></li>
-                    <li><a href="#" class="menu__link">О нас</a></li>
-                    <li><a href="#" class="menu__link">Блог</a></li>
-                    <li><a href="#" class="menu__link">Контакты</a></li>
-                    <li><a href="#" class="menu__link">Аккаунт</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
-    <main class="page">
-        <section class="page__section">
-            {% block content %}
-            {% endblock %}
-        </section>
-    </main>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="#" class="map-marker">Челябинск, Челябинский пр. 165</a>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <a href="#" class="messenger"><img src="{% static 'portfolio/vk.png' %}" alt=""></a>
+                        <a href="#" class="messenger"><img src="{% static 'portfolio/telegram.png' %}" alt=""></a>
+                        <a href="#" class="messenger"><img src="{% static 'portfolio/instagram.png' %}" alt=""></a>
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <a href="tel:+79999999999" class="mobile">+7 (999) 999-99-99</a>
+                </div>
+            </div>
+        </div>
+</section>
+
 
 </div>
 
