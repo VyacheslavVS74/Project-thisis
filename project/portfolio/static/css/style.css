@@ -9,6 +9,7 @@
 }
 body {
     height: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 body.lock {
@@ -28,18 +29,24 @@ body.lock {
 
 /*--------------------Шапка--------------------*/
 .name {
-    font-size: 45px;
+    font-size: 50px;
     font-family: 'Carter One', cursive;
     text-align: center;
     color: #fff;
 }
 
+.name_description {
+    text-align: center;
+    color: #fff;
+    font-size: 22px;
+}
+
 .header {
     /* background-color: #CBB486; */
     background-image: url(../portfolio/fon1.jpg);
-    box-shadow: inset 0 -6px 10px #5E4629;
+    box-shadow: inset 0 -6px 10px #CDB6A4;
     width: 100%;
-    min-height: 400px;
+    min-height: 300px;
 }
 .container {
     max-width: 1200px;
@@ -186,12 +193,12 @@ body.lock {
 /*---------------------block__1------------------------ */
 
 .block__fon {
-    /* background: #000; */
+    background: #000;
     background-image: url(../portfolio/fon1.jpg);
     background-color: #c7b39b;
     background-position: center;
     width: 100%;
-    min-height: 600px;
+    min-height: 400px;    
 
     position: relative;
     text-align: center;
@@ -200,17 +207,31 @@ body.lock {
     z-index: -1;
 }
 
-.block__fon img {
+
+/* .block__fon img {
     width: 100%;
     height: auto;
     opacity: 0.6;
-}
+} */
 
 .block__1_text {
     font-size: 60px;
     position:relative;
     top: 80px;
     /* left: 30px; */
+}
+
+
+@media (max-width: 540px) {
+    .block__1_text {
+        font-size: 40px;
+        position:relative;
+        top: 80px;
+        /* left: 30px; */
+    }
+    .block__fon {
+        min-height: 300px;
+    }
 }
 
 /*---------------------block__1------------------------ */
@@ -221,7 +242,7 @@ body.lock {
 } */
 
 .model {
-    background: #5E4629;
+    background: #CDB6A4;
 }
 .hr-text {
     text-align: center;
@@ -234,7 +255,7 @@ body.lock {
 }
 
 .block__works {
-    background: #5E4629;
+    background: #CDB6A4;
 
 }
 .works {
@@ -248,8 +269,7 @@ body.lock {
 .count {
     background: whitesmoke;
     border: 6px solid whitesmoke;
-    margin: 30px 8px;
-    
+    margin: 30px 8px;    
 }
 
 .text {
@@ -278,7 +298,7 @@ body.lock {
 }
 
 .price {
-    color: #CBB486;
+    color: #8E644C;
     font-size: 20px;
 }
 
@@ -296,7 +316,7 @@ body.lock {
 }
 
 .block__catalog__btn {
-    background: #5E4629;
+    background: #CDB6A4;
 }
 .btn1 {
     text-align: center;
@@ -318,7 +338,7 @@ body.lock {
 /*--------------------/Page--------------------*/
 /*--------------------/footer--------------------*/
 .footer {
-    background: #CBB486;
+    background: #474541;
 
 
     margin-top: auto;
@@ -342,16 +362,16 @@ body.lock {
 }
 .mobile {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-size: 18px;
 }
 .map-marker {
     text-decoration: none;
-    color: #000;
+    color: #fff;
     font-size: 18px;
 }
 .mobile:hover, .map-marker:hover {
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #fff;
 }
 @media (max-width: 720px){
     .row {
@@ -363,13 +383,13 @@ body.lock {
 }
 /*--------------------/footer--------------------*/
 .block__search {
-    background: #5E4629;
+    background: #CDB6A4;
 }
 .form__field {
     text-align: center;
 }
 .input__text {
-    width: 250px;
+    width: 300px;
     height: 40px;
     margin: 15px 10px 0 0;
     background: #fff;
@@ -377,10 +397,11 @@ body.lock {
     font-style: italic;
     border-radius: 5px;
     padding: 0 0 0 7px;
+    margin-top: 40px;
 }
 .search__btn {
-    background: #CBB486;
-    padding: 12px 10px;
+    background: #8E644C;
+    padding: 12px 15px;
     border-radius: 5px;
     font-style: italic; 
 }

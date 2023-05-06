@@ -22,9 +22,9 @@
                         <ul class="menu__list">
                             <li><a href="{% url 'home' %}" class="menu__link">Главная</a></li>
                             <li><a href="{% url 'catalog' %}" class="menu__link">Каталог</a></li>
-                            <li><a href="#" class="menu__link">О нас</a></li>
+                            <li><a href="{% url 'about' %}" class="menu__link">О нас</a></li>
                             <li><a href="#" class="menu__link">Блог</a></li>
-                            <li><a href="#" class="menu__link">Контакты</a></li>
+                            <li><a href="{% url 'contact' %}" class="menu__link">Контакты</a></li>
                             <li><a href="#" class="menu__link">Аккаунт</a></li>
                         </ul>
                     </nav>
@@ -33,6 +33,7 @@
             <div class="header__name">
                 <div class="title">
                     <h1 class="name">ProMast</h1>
+                    <p class="name_description">Мастерская по изготовлению изделий и принадлежностей из дерева</p>
                 </div>
             </div>
         </div>

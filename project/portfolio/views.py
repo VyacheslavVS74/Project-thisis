@@ -26,3 +26,11 @@ def work_main(request, pk):
         'work': work_obj,
     }
     return render(request, 'portfolio/work_main.html', context)
+
+
+def about(request):
+    return render(request, 'portfolio/about.html')
+
+
+def contact(request):
+    return render(request, 'portfolio/contact.html')
