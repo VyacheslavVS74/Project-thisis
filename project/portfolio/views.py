@@ -18,3 +18,11 @@ def catalog(request):
         'search_query': search_query,
     }
     return render(request, 'portfolio/catalog.html', context)
+
+
+def work_main(request, pk):
+    work_obj = Works.objects.get(id=pk)
+    context = {
+        'work': work_obj,
+    }
+    return render(request, 'portfolio/work_main.html', context)

@@ -8,11 +8,6 @@
 </head>
 <body>
 <div class="wrapper">
-    <div id="contact">
-        <div class="title">
-            <h1 class="name">ProMast</h1>
-        </div>
-    </div>
     <header class="header">
         <div class="container">
             <div class="header__row">
@@ -35,13 +30,17 @@
                     </nav>
                 </div>
             </div>
+            <div class="header__name">
+                <div class="title">
+                    <h1 class="name">ProMast</h1>
+                </div>
+            </div>
         </div>
     </header>
     <div class="content">
         {% block content %}
         {% endblock %}
     </div>
-
     <section class="footer">
         <div class="container">
             <div class="row">
@@ -61,10 +60,7 @@
             </div>
         </div>
 </section>
-
-
 </div>
-
 
 <script src="{% static 'js/script.js' %}"></script>
 </body>

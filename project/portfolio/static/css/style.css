@@ -27,21 +27,19 @@ body.lock {
 /*--------------------Обнуление, body--------------------*/
 
 /*--------------------Шапка--------------------*/
-#contact {
-    background: #fff;
-    max-width: 1200px;
-    margin: 0px auto;
-    margin-top: auto;
-    padding: 10px;
-}
 .name {
     font-size: 45px;
     font-family: 'Carter One', cursive;
     text-align: center;
+    color: #fff;
 }
 
 .header {
-    background-color: #CBB486;
+    /* background-color: #CBB486; */
+    background-image: url(../portfolio/fon1.jpg);
+    box-shadow: inset 0 -6px 10px #5E4629;
+    width: 100%;
+    min-height: 400px;
 }
 .container {
     max-width: 1200px;
@@ -166,13 +164,13 @@ body.lock {
 }
 
 .menu__link {
-    color: #000;
+    color: #fff;
     text-decoration: none;
     font-size: 20px;
 }
 
 .menu__link:hover {
-    border-bottom: 3px solid #000;
+    border-bottom: 3px solid #fff;
 }
 
 @media (max-width: 768px) {
@@ -188,7 +186,13 @@ body.lock {
 /*---------------------block__1------------------------ */
 
 .block__fon {
-    background: #000;
+    /* background: #000; */
+    background-image: url(../portfolio/fon1.jpg);
+    background-color: #c7b39b;
+    background-position: center;
+    width: 100%;
+    min-height: 600px;
+
     position: relative;
     text-align: center;
     color: #C7BDB2;
@@ -204,96 +208,9 @@ body.lock {
 
 .block__1_text {
     font-size: 60px;
-    position: absolute;
-    top: 105px;
-    left: 100px;
-}
-
-.block__1_text_1 {
-    font-size: 60px;
-    position: absolute;
-    top: 180px;
-    left: 150px;
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .block__1_text {
-        font-size: 50px;
-        position: absolute;
-        top: 100px;
-        left: 30px;
-    }
-
-    .block__1_text_1 {
-        font-size: 50px;
-        position: absolute;
-        top: 180px;
-        left: 50px;
-    }
-}
-
-@media (min-width: 640px) and (max-width: 767px) {
-    .block__1_text {
-        font-size: 45px;
-        position: absolute;
-        top: 80px;
-        left: 15px;
-    }
-
-    .block__1_text_1 {
-        font-size: 45px;
-        position: absolute;
-        top: 140px;
-        left: 25px;
-    }
-}
-
-@media (min-width: 480px) and (max-width: 639px) {
-    .block__1_text {
-        font-size: 30px;
-        position: absolute;
-        top: 70px;
-        left: 15px;
-    }
-
-    .block__1_text_1 {
-        font-size: 30px;
-        position: absolute;
-        top: 105px;
-        left: 25px;
-    }
-}
-
-@media (min-width: 320px) and (max-width: 479px) {
-    .block__1_text {
-        font-size: 20px;
-        position: absolute;
-        top: 70px;
-        left: 15px;
-    }
-
-    .block__1_text_1 {
-        font-size: 20px;
-        position: absolute;
-        top: 100px;
-        left: 25px;
-    }
-}
-
-@media (max-width: 320px) {
-    .block__1_text {
-        font-size: 20px;
-        position: absolute;
-        top: 50px;
-        left: 15px;
-    }
-
-    .block__1_text_1 {
-        font-size: 20px;
-        position: absolute;
-        top: 70px;
-        left: 25px;
-    }
+    position:relative;
+    top: 80px;
+    /* left: 30px; */
 }
 
 /*---------------------block__1------------------------ */
@@ -302,6 +219,7 @@ body.lock {
 /* .content {
 
 } */
+
 .model {
     background: #5E4629;
 }

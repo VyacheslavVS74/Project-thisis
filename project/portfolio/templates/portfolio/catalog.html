@@ -26,7 +26,7 @@
           <p><span class="material">Материал:</span> {{ work.material }}</p>
           <p class="price">{{ work.price }} руб.</p>
           <div class="btn">
-            <a href="">Подробнее</a>
+            <a href="{% url 'work-main' work.id %}">Подробнее</a>
           </div>
           <div class="btn">
             <a href="">В корзину</a>
