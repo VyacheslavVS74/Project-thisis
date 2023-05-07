@@ -237,12 +237,37 @@ body.lock {
 /*---------------------block__1------------------------ */
 
 /*--------------------/Page--------------------*/
+
+.block__production {
+    background: #CDB6A4;
+}
+.wrap__production {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.image__production {
+    margin: 15px 40px 15px;
+    box-sizing: border-box;
+}
+.image__production img {
+    border: 3px solid #8E644C;
+    border-radius: 10px 30px;
+}
+
+.text__production {
+    align-self: center;
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
 /* .content {
 
 } */
 
 .model {
-    background: #CDB6A4;
+    background: #F3EDDF;
 }
 .hr-text {
     text-align: center;
@@ -255,7 +280,7 @@ body.lock {
 }
 
 .block__works {
-    background: #CDB6A4;
+    background: #F3EDDF;
 
 }
 .works {
@@ -299,12 +324,12 @@ body.lock {
 
 .price {
     color: #8E644C;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .btn {
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .btn a {
@@ -316,11 +341,11 @@ body.lock {
 }
 
 .block__catalog__btn {
-    background: #CDB6A4;
+    background: #F3EDDF;
 }
 .btn1 {
     text-align: center;
-    padding: 50px 0;
+    padding-bottom: 40px;
 }
 
 .btn1 a {
@@ -335,6 +360,34 @@ body.lock {
 .btn1 a:hover {
     border-bottom: 3px solid #000;
 }
+
+.block__search {
+    background: #F3EDDF;
+}
+.form__field {
+    text-align: center;
+}
+.input__text {
+    width: 300px;
+    height: 40px;
+    margin: 15px 10px 0 0;
+    background: #fff;
+    border: #fff;
+    font-style: italic;
+    border-radius: 5px;
+    padding: 0 0 0 7px;
+    margin-top: 40px;
+}
+.search__btn {
+    background: #8E644C;
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-style: italic; 
+}
+.search__btn:hover {
+    background: #a89773;
+}
+
 /*--------------------/Page--------------------*/
 /*--------------------/footer--------------------*/
 .footer {
@@ -382,29 +435,3 @@ body.lock {
     }
 }
 /*--------------------/footer--------------------*/
-.block__search {
-    background: #CDB6A4;
-}
-.form__field {
-    text-align: center;
-}
-.input__text {
-    width: 300px;
-    height: 40px;
-    margin: 15px 10px 0 0;
-    background: #fff;
-    border: #fff;
-    font-style: italic;
-    border-radius: 5px;
-    padding: 0 0 0 7px;
-    margin-top: 40px;
-}
-.search__btn {
-    background: #8E644C;
-    padding: 12px 15px;
-    border-radius: 5px;
-    font-style: italic; 
-}
-.search__btn:hover {
-    background: #a89773;
-}
