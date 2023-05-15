@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Главная</title>
+    <title>ProMast</title>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
@@ -23,7 +23,7 @@
                             <li><a href="{% url 'home' %}" class="menu__link">Главная</a></li>
                             <li><a href="{% url 'catalog' %}" class="menu__link">Каталог</a></li>
                             <li><a href="{% url 'about' %}" class="menu__link">О нас</a></li>
-                            <li><a href="#" class="menu__link">Блог</a></li>
+                            <li><a href="{% url 'blog' %}" class="menu__link">Блог</a></li>
                             <li><a href="{% url 'contact' %}" class="menu__link">Контакты</a></li>
                             <li><a href="#" class="menu__link">Аккаунт</a></li>
                         </ul>
@@ -33,7 +33,7 @@
             <div class="header__name">
                 <div class="title">
                     <h1 class="name">ProMast</h1>
-                    <p class="name_description">Мастерская по изготовлению изделий и принадлежностей для дома из дерева</p>
+                    <p class="name_description">Мастерская по изготовлению изделий и принадлежностей для дома и офиса из дерева</p>
                 </div>
             </div>
         </div>

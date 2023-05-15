@@ -1,5 +1,6 @@
 "use strict"
 
+/*=====================Header======================*/
 const menu = document.querySelector('.menu__body')
 const menuBtn = document.querySelector('.menu__icon')
 
@@ -45,3 +46,70 @@ anchors.forEach(anchor => {
 		})
 	})
 })
+/*=====================/Header======================*/
+
+/*=====================Slider======================*/
+let offset = 0;
+let imageWork = document.getElementsByClassName('image-work-main').length;
+const sliderLine = document.querySelector('.slider-line');
+
+if (imageWork == 3) {
+document.querySelector('.slider-next').addEventListener('click', function(){
+	offset = offset + 450;
+	if (offset > 900) {
+		offset = 0
+	}
+	sliderLine.style.left = -offset + 'px'
+});
+
+document.querySelector('.slider-prev').addEventListener('click', function(){
+	offset = offset - 450;
+	if (offset < 0) {
+		offset = 900
+	}
+	sliderLine.style.left = -offset + 'px'
+});
+}
+console.log(imageWork)
+
+if (imageWork == 2) {
+	document.querySelector('.slider-next').addEventListener('click', function(){
+		offset = offset + 450;
+		if (offset > 450) {
+			offset = 0
+		}
+		sliderLine.style.left = -offset + 'px'
+	});
+	
+	document.querySelector('.slider-prev').addEventListener('click', function(){
+		offset = offset - 450;
+		if (offset < 0) {
+			offset = 450
+		}
+		sliderLine.style.left = -offset + 'px'
+	});
+	}
+	console.log(imageWork)
+
+	if (imageWork == 1) {
+			const buttonPrev = document.querySelector('.slider-prev')
+			const buttonNext = document.querySelector('.slider-next')
+			buttonPrev.style.display = 'none'
+			buttonNext.style.display = 'none'
+		}
+/*=====================/Slider======================*/
+
+// let searchForm = document.getElementById('search')
+// let pageLink = document.querySelectorAll('.page-link')
+
+// if (searchForm) {
+//   for (let i = 0; pageLink.length > i; i++) {
+//     pageLink[i].addEventListener('click', function (e) {
+//       e.preventDefault()
+
+//       let page = this.dataset.page;
+//       searchForm.innerHTML += `<input value=${page} name="page" type="hidden">`
+//       searchForm.submit();
+//     })
+//   }
+// }

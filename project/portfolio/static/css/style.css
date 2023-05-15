@@ -88,7 +88,7 @@ body.lock {
         width: 30px;
         height: 18px;
         position: relative;
-        z-index: 5;
+        z-index: 100;
         cursor: pointer;
     }
 
@@ -140,6 +140,7 @@ body.lock {
         background-color: rgba(0, 0, 0, 0.8);
         -webkit-transition: all 0.2s;
         transition: all 0.2s;
+        z-index: 100;
     }
 }
 
@@ -190,24 +191,59 @@ body.lock {
 
 /*--------------------/Меню--------------------*/
 
-/*---------------------block__1------------------------ */
+/*---------------------form__base------------------------ */
 
 .form__base {
-    background-image: url(../portfolio/fon1.jpg);
-    width: 100%;
-    min-height: 500px;  
+    background: #CDB6A4;
+    width: 100%; 
     text-align: center;
-    z-index: -1;
     color: #fff;
 }
 
 .column__base {
-    color: #fff;
+    color: #000;
+    align-items: center;
 }
 
-/*---------------------block__1------------------------ */
+.personal__home {
+    font-size: 10px;
+    text-decoration: none;
+    color: #000;
+}
 
-/*--------------------/Page--------------------*/
+.column__base input[type=text], .column__base textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    border: 2px solid #000;
+    border-radius: 5px;
+}
+
+.column__base input[type=submit] {
+    background: #fff;
+    color: #000;
+    padding: 12px 20px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.column__base input[type=submit]:hover {
+    background-color: #F3EDDF;
+}
+
+.column__base {
+    width: 50%;
+    padding: 20px;
+
+}
+
+/*---------------------/form__base------------------------ */
+
+/*--------------------Page--------------------*/
 
 .block__production {
     background: #CDB6A4;
@@ -360,14 +396,25 @@ body.lock {
 }
 
 /*--------------------/Page--------------------*/
-/*--------------------/footer--------------------*/
+/*--------------------footer--------------------*/
 .footer {
-    background: #474541;
+    /* background: #474541; */
+    background-image: url(../portfolio/fon1.jpg);
+    width: 100%;
+    /* z-index: -1; */
+
     align-items: center;
     margin-top: auto;
     padding: 30px;
-
 }
+/* .form__base {
+    background-image: url(../portfolio/fon1.jpg);
+    width: 100%;
+    min-height: 500px;  
+    text-align: center;
+    z-index: -1;
+    color: #fff;
+} */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -430,7 +477,7 @@ body.lock {
 
 .contact__text h2 {
     padding-top: 20px;
-    font-size: 40px;
+    font-size: 35px;
     text-align: center;
 }
 
@@ -501,7 +548,7 @@ body.lock {
 }
 
 @media screen and (max-width: 720px) {
-    .column, input[type=submit] {
+    .column__base, .column, .column input[type=submit] {
         width: 100%;
         margin-top: 0;
     }
@@ -520,5 +567,93 @@ body.lock {
     border-radius: 3px;
 }
 
-
 /*--------------------/contacts--------------------*/
+/*--------------------work_main--------------------*/
+
+.work__main {
+    background: #F3EDDF;
+    box-sizing: border-box;
+}
+
+.work__main__style {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.slider {
+    width: 450px;
+    border: 2px solid black;
+    border-radius: 3px;
+    margin: 30px auto;
+    margin-bottom: 5px;
+    overflow: hidden;
+    
+}
+.slider img {
+    width: 450px;
+    z-index: 0;
+
+}
+.slider-line {
+    width: 1350px;
+    background: #B5B4B0;
+    display: flex;
+    position: relative;
+    left: 0;
+    transition: all ease 1s;
+    
+}
+
+.slider-prev, .slider-next {
+    background: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-style: italic;
+    margin: 5px 5px 15px;
+
+}
+.slider-prev:hover, .slider-next:hover {
+    background: #F3EDDF;
+}
+.header__description {
+    border-bottom: 3px solid #8E644C;
+    margin-bottom: 10px;
+}
+.description {
+    box-sizing: border-box;
+    margin: 25px auto;
+    margin-bottom: 0;
+    padding-bottom: 25px;
+}
+/*--------------------/work_main--------------------*/
+
+
+.pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+.pagination li {
+    display: inline;
+    
+}
+
+.btn2 {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #8E644C;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+.center {
+    text-align: center;
+}
+.btn--sub {
+    color: red;
+
+}

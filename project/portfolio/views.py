@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Works
 from .utils import search_works
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 def home(request):
@@ -13,9 +14,24 @@ def home(request):
 
 def catalog(request):
     works, search_query = search_works(request)
+    page = request.GET.get('page')
+    results = 3
+    paginator = Paginator(works, results)
+
+    try:
+        works = paginator.get_page(page)
+    except PageNotAnInteger:
+        page = 1
+        works = paginator.get_page(page)
+    except EmptyPage:
+        page = paginator.num_pages
+        works = paginator.get_page(page)
+
     context = {
         'works': works,
         'search_query': search_query,
+        'paginator': paginator,
+
     }
     return render(request, 'portfolio/catalog.html', context)
 

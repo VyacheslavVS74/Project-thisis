@@ -4,12 +4,38 @@
 
 <section class="work__main">
     <div class="container">
-        <div class="text-center">
-            <div class="cont-body">
-                <h2>{{ work.title }}</h2>
-                <img src="{{ work.image_1.url }}" alt="">
-
+        <div class="contact__text">
+            <h2>{{ work.title }}</h2>
+        </div>
+        <div class="work__main__style">
+            <div class="slider__main">
+                <div class="slider">
+                    <div class="slider-line">
+                        <img src="{{ work.image_1.url }}" alt="" class="image-work-main">
+                        {% if work.image_2 %}
+                        <img src="{{ work.image_2.url }}" alt="" class="image-work-main">
+                        {% else %}
+                        <span></span>
+                        {% endif %}
+                        {% if work.image_3 %}
+                        <img src="{{ work.image_3.url }}" alt="" class="image-work-main">
+                        {% else %}
+                        <span></span>
+                        {% endif %}
+                    </div>
+                </div>
+                <button class="slider-prev">&lt; Пред</button>
+                <button class="slider-next">След &gt;</button>
             </div>
+            <div class="work__context">
+                <p>Цена: {{ work.price }} &#8381</p>
+                <p>Материал изделия: {{ work.material }}</p>
+                 <div class="btn"><a href="#">Заказать</a></div>
+            </div>
+        </div>
+        <div class="description">
+            <p class="header__description">ОПИСАНИЕ</p>
+            <p>{{ work.description }}</p>
         </div>
     </div>
 </section>
