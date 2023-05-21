@@ -4,7 +4,7 @@
 
 <section class="block__search">
   <div class="container">
-    <form class="form" action="{% url 'catalog' %}" method="get">
+    <form id="search" class="form" action="{% url 'catalog' %}" method="get">
       <div class="form__field">
         <input class="input__text" type="text" name="search_query" value="{{search_query}}"
                placeholder=" Введите запрос..."/>

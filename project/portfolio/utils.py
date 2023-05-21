@@ -1,6 +1,6 @@
 from .models import Works
 from django.db.models import Q
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
+from django.core.paginator import Paginator
 
 
 def search_works(request):
@@ -16,7 +16,6 @@ def search_works(request):
 
 def paginate_works(request, works, results):
     page = request.GET.get('page', 1)
-    # results = 6
     paginator = Paginator(works, results, allow_empty_first_page=True)
 
     works = paginator.get_page(page)

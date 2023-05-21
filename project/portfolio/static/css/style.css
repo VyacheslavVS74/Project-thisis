@@ -202,6 +202,9 @@ body.lock {
 
 .column__base {
     color: #000;
+
+}
+.column__base form {
     align-items: center;
 }
 
@@ -629,31 +632,118 @@ body.lock {
 }
 /*--------------------/work_main--------------------*/
 
-
+/*--------------------pagination--------------------*/
+.paginator {
+    background: #F3EDDF;
+}
 .pagination {
     display: inline-block;
     padding: 0;
     margin: 0;
+
 }
 
 .pagination li {
-    display: inline;
-    
+    display: inline;    
 }
+
 
 .btn2 {
     color: black;
     float: left;
     padding: 8px 16px;
     text-decoration: none;
-    background-color: #8E644C;
+    background: #fff;
     padding: 10px 10px;
     margin: 10px 10px;
+    border: 2px solid #000;
+    border-radius: 3px;
+}
+.btn2:hover {
+    background: #F3EDDF;
 }
 .center {
     text-align: center;
 }
 .btn--sub {
-    color: red;
+    background: #CDB6A4;
+}
+
+/*--------------------/pagination--------------------*/
+
+/*--------------------blogs__main--------------------*/
+.blogs{
+    background: #F3EDDF;  
+}
+.content__blog {
+    display: flex;
+    padding: 40px;
+    box-sizing: border-box;
+    
+}
+.sidebar ul, .first, .blogs_main ul {
+    list-style: none;
+}
+.sidebar ul li a {
+    color: #8E644C;
+    text-decoration: none;
+    padding: 20px;
+}
+.sidebar ul li a:hover {
+    color: #41413f;
+}
+.sidebar ul {
+    width: 280px;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+.sidebar a {
+    padding: 20px;
+    display: block;
+    border: 1px solid #fff;
+    background: #B5B4B0;
+    font-size: 18px;
+    font-weight: bold;
+}
+.selected {
+    font-size: 18px;
+    padding: 20px;
+    border: 1px solid #fff;
+    font-weight: bold;
+    background: #ccc;
+}
+.blogs_main li {
+    border: 1px solid #fff;
+    margin-bottom: 40px;
+}
+
+.first, .date {
+    padding: 10px 20px;
+    background: #8E644C;
+    font-size: 18px;
+    color: #fff;
+    margin: 0;
+}
+.image_blog {
+    float: left;
+    margin-right: 20px;
+    max-width: 30%;
 
 }
+.image_1 {
+    max-width: 100%;    
+}
+.text_blog {
+    padding: 20px 20px 0;
+}
+.text_blog a {
+    padding-left: 0;
+    color: #41413f;
+}
+.text_blog a:hover {
+    color: #8E644C;
+}
+
+
+/*--------------------/blogs__main--------------------*/
+
