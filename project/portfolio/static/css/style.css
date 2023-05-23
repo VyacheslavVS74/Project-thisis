@@ -575,6 +575,7 @@ body.lock {
 
 .work__main {
     background: #F3EDDF;
+    padding: 40px;
     box-sizing: border-box;
 }
 
@@ -640,14 +641,11 @@ body.lock {
     display: inline-block;
     padding: 0;
     margin: 0;
-
 }
 
 .pagination li {
     display: inline;    
 }
-
-
 .btn2 {
     color: black;
     float: left;
@@ -678,19 +676,20 @@ body.lock {
 .content__blog {
     display: flex;
     padding: 40px;
+    /* padding-top: 40px; */
+    /* padding-bottom: 180px; */
     box-sizing: border-box;
-    
 }
 .sidebar ul, .first, .blogs_main ul {
     list-style: none;
 }
 .sidebar ul li a {
-    color: #8E644C;
+    color: #fff;
     text-decoration: none;
     padding: 20px;
 }
 .sidebar ul li a:hover {
-    color: #41413f;
+    color: #000;
 }
 .sidebar ul {
     width: 280px;
@@ -701,7 +700,8 @@ body.lock {
     padding: 20px;
     display: block;
     border: 1px solid #fff;
-    background: #B5B4B0;
+    border-radius: 5px; 
+    background: #8E644C;
     font-size: 18px;
     font-weight: bold;
 }
@@ -709,12 +709,18 @@ body.lock {
     font-size: 18px;
     padding: 20px;
     border: 1px solid #fff;
+    border-radius: 5px; 
     font-weight: bold;
     background: #ccc;
 }
+/* --------------------------------------- */
+.blogs_main {
+    background: #F3EDDF;
+}
 .blogs_main li {
-    border: 1px solid #fff;
+    border: 1px solid #fff;    
     margin-bottom: 40px;
+    background: #fff;
 }
 
 .first, .date {
@@ -736,14 +742,47 @@ body.lock {
 .text_blog {
     padding: 20px 20px 0;
 }
+
+.text_blog p {
+    padding: 10px;
+}
 .text_blog a {
     padding-left: 0;
-    color: #41413f;
+    text-decoration: none;
+    color: #000;
 }
 .text_blog a:hover {
     color: #8E644C;
 }
+/*--------------------post--------------------*/
+.post {
+    background: #F3EDDF;
+    display: flex;
+    box-sizing: border-box;
+    padding: 40px;
+}
+.post__center div img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 
+    max-width: 65%;
+    box-sizing: border-box;
+    align-items: center;
+}
+.post__center .back {
+    text-align: center;
+    padding-top: 20px;
+}
+.post__center p {
+    padding-bottom: 20px;
+}
+.post__center div {
+    align-items: center;
+}
+.post__center h2 {
+    text-align: center;
 
+}
 /*--------------------/blogs__main--------------------*/
 

@@ -1,6 +1,34 @@
 {% extends 'portfolio/base.html' %}
-
 {% block content %}
-<h1>{{ post.title }}</h1>
+{% load static %}
+
+
+<div class="post">
+    <div class="container">
+        <div class="post__center">
+            <p>Категория: {{ post.cat }}</p>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.content_1|linebreaks }}</p>
+            {% if post.image_1 %}
+            <div>
+
+                <img src="{{ post.image_1.url }}" alt="">
+            </div>
+
+            {% endif %}
+            <p>{{ post.content_2|linebreaks }}</p>
+            {% if post.image_2 %}
+            <div>
+
+                <img src="{{ post.image_2.url }}" alt="">
+            </div>
+            {% endif %}
+            <p class="back"><a href="{% url 'blog' %}"><img src="{% static 'blog/back.png' %}" alt=""></a></p>
+        </div>
+    </div>
+</div>
+
+
+
 
 {% endblock %}
