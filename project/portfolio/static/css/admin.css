@@ -1,0 +1,24 @@
+/*--------------------admin--------------------*/
+#header, #branding h1 a {
+    color: aliceblue;
+}
+#header, .module caption {
+    background: #8E644C;
+}
+tr:nth-child(odd), #nav-sidebar .current-model, tr:nth-child(even){
+    background: #fff;
+}
+body, .module, #nav-sidebar {
+    background-color: lightgoldenrodyellow;
+}
+h1, h2 {
+    color: #000;
+}
+.required label, label.required {
+    font-weight: bold;
+    color: #000;
+}
+input[type=text] {
+    background-color: #fff;
+}
+/*--------------------/admin--------------------*/

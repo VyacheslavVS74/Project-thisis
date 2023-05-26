@@ -18,24 +18,27 @@
           </div>
 
           <div class="blogs_main">
-                  <ul>
-                      {% for p in posts %}
-                      <li>
-                          <p class="first">Категория: {{ p.cat }}</p>
-                          <div class="text_blog">
-                              {% if p.image_1 %}
-                              <img src="{{ p.image_1.url }}" class="image_blog" alt="">
-                              {% endif %}
-                              <h2><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h2>
-                              <p>{{ p.content_1|linebreaks|truncatewords:50 }}</p>
-                          </div>
-                          <p class="date">Дата: {{ p.time_update|date:"d-m-Y H:i:s" }}</p>
-                      </li>
-                      {% endfor %}
-                  </ul>
+              <ul>
+                  {% for p in posts %}
+                  <li>
+                      <p class="first">Категория: {{ p.cat }}</p>
+                      <div class="text_blog">
+                          {% if p.image %}
+                          <img src="{{ p.image.url }}" class="image_blog" alt="">
+                          {% endif %}
+                          <h2><a href="{{ p.get_absolute_url }}">{{ p.title }}</a></h2>
+                          <p>{{ p.content|safe|truncatewords:70 }}</p>
+                      </div>
+                      <p class="date">Дата: {{ p.time_update|date:"d-m-Y H:i:s" }}</p>
+                  </li>
+                  {% endfor %}
+              </ul>
           </div>
       </div>
+
+
   </div>
+
 </section>
 
 

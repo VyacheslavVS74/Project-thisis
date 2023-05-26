@@ -1,17 +1,8 @@
-from django.shortcuts import render
 from django.views.generic import ListView, DetailView
-from .models import *
+from .utils import *
 
 
-# def blog(request):
-#     context = {
-#
-#     }
-#     return render(request, 'blog/blog.html', context)
-
-
-class BlogHome(ListView):
-    model = Blog
+class BlogHome(DataMixin, ListView):
     template_name = 'blog/blog.html'
     context_object_name = 'posts'
 
@@ -37,7 +28,7 @@ class ShowPost(DetailView):
         return context
 
 
-class BlogCategory(ListView):
+class BlogCategory(DataMixin, ListView):
     model = Blog
     template_name = 'blog/blog.html'
     context_object_name = 'posts'
