@@ -11,6 +11,7 @@ def home(request):
     return render(request, 'portfolio/home.html', context)
 
 
+
 def catalog(request):
     works, search_query = search_works(request)
     custom_range, works = paginate_works(request, works, 6)

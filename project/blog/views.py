@@ -1,4 +1,4 @@
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, FormView
 from .utils import *
 
 
@@ -43,3 +43,5 @@ class BlogCategory(DataMixin, ListView):
         context['title'] = 'Категория - ' + str(context['posts'][0].cat)
         context['cat_selected'] = context['posts'][0].cat_id
         return context
+
+
