@@ -799,3 +799,26 @@ body.lock {
 }
 /*--------------------/blogs__main--------------------*/
 
+/* .form_input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+} */
+
+.login {
+    text-align: center;
+}
+/* .login input {
+    width: 300px;
+    height: 40px;
+    margin: 15px 10px 0 0;
+    background: #fff;
+    border: #fff;
+    font-style: italic;
+    border-radius: 5px;
+    padding: 0 0 0 7px;
+    margin-top: 40px;
+} */
+/* .login input.reg::placeholder {
+    background: #fff;
+} */
