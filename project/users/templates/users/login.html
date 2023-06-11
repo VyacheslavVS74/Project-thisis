@@ -5,33 +5,36 @@
 {% if page == 'register' %}
 <section class="login">
     <div class="container">
+        <form action="{% url 'register' %}" method="post" class="bg">
             <h1>Регистрация</h1>
-<form action="{% url 'register' %}" method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button>Зарегистрироваться</button>
-</form>
-    <p>Если есть аккаунт <a href="{% url 'login' %}">Авторизация</a></p>
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="login__btn">Зарегистрироваться</button>
+            <p>Если есть аккаунт: <a href="{% url 'login' %}">Авторизация</a></p>
+        </form>
     </div>
 </section>
-
 {% else %}
 <section class="login">
     <div class="container">
-        <h1>Авторизация</h1>
-        <form action="{% url 'login' %}" method="post">
+        <form action="{% url 'login' %}" method="post" class="bg">
             {% csrf_token %}
+            <h1>Авторизация</h1>
             <div>
-                <input type="text" name="username" placeholder="Username">
-
+                <label>Логин</label>
+                <input class="form-input" type="text" name="username" placeholder="Username">
             </div>
-            <input type="password" name="password" placeholder="password">
-            <button class="search__btn">Авторизация</button>
+            <div>
+                <label>Пароль</label>
+                <input class="form-input" type="password" name="password" placeholder="password">
+            </div>
+            <button class="login__btn">Авторизация</button>
+            <p>Нет аккаунта?</p>
+            <a href="{% url 'register' %}">Зарегистрироваться</a>
         </form>
-        <p>Нет аккаунта?</p>
-        <a href="{% url 'register' %}">Зарегистрироваться</a>
     </div>
 </section>
 {% endif %}
+
 
 {% endblock %}

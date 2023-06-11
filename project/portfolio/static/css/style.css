@@ -799,17 +799,23 @@ body.lock {
 }
 /*--------------------/blogs__main--------------------*/
 
-/* .form_input {
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-} */
-
 .login {
-    text-align: center;
+    text-align: center;    
 }
-/* .login input {
-    width: 300px;
+.login .container {
+    max-width: 400px;
+}
+
+.login input {
+    width: 100%;
+    padding: 6px 10px;
+    box-sizing: border-box;
+    margin-top: 4px;
+    border-radius: 5px;
+    background: #fff;
+}
+/* .form-input {
+
     height: 40px;
     margin: 15px 10px 0 0;
     background: #fff;
@@ -819,6 +825,38 @@ body.lock {
     padding: 0 0 0 7px;
     margin-top: 40px;
 } */
-/* .login input.reg::placeholder {
+.bg {
+    box-shadow: 0 2px 12px 2px #8E644C;
+    padding: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #CDB6A4;
+    margin: 30px auto 30px;
+}
+.login__btn {
     background: #fff;
-} */
+    padding: 12px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    /* font-style: italic;  */
+    margin: 10px auto 10px;
+}
+.login__btn:hover {
+    background: #F3EDDF;
+}
+.login a{
+    /* text-decoration: none; */
+    color: #000;
+}
+.alert__message {
+    text-align: center;
+
+    padding: 5px 5px;
+    margin-top: 10px;
+
+}
+.errorlist{
+    list-style-type: none;
+    font-size: 14px;
+    color: #a43333;
+}
