@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Blog, Category
+from .models import Blog, Category, Review
 from ckeditor_uploader.widgets import CKEditorUploadingWidget
 from django import forms
 from django.utils.safestring import mark_safe
@@ -41,6 +41,8 @@ class CategoryAdmin(admin.ModelAdmin):
 
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(Category, CategoryAdmin)
+admin.site.register(Review)
+
 
 admin.site.site_title = 'Админ панель ProMast'
 admin.site.site_header = 'Админ панель ProMast'

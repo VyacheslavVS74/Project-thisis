@@ -1,7 +1,9 @@
 # from django.views.generic import ListView, DetailView, FormView
 # from .utils import *
+from django.contrib import messages
+from django.shortcuts import render, get_object_or_404, redirect
 
-from django.shortcuts import render, get_object_or_404
+from .forms import ReviewForm
 from .models import Blog
 from .utils import paginate_blogs
 
@@ -32,10 +34,22 @@ def blog_home(request):
 
 
 def show_post(request, post_slug):
-    post = get_object_or_404(Blog, slug=post_slug)
+    post = Blog.objects.get(slug=post_slug)
+    form = ReviewForm()
+
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        review = form.save(commit=False)
+        review.post = post
+        review.owner = request.user
+        review.save()
+        messages.success(request, 'Ваш отзыв добавлен')
+        return redirect('post', post_slug=post.slug)
+
     context = {
         'post': post,
         'cat_selected': 1,
+        'form': form,
     }
     return render(request, 'blog/post.html', context)
 

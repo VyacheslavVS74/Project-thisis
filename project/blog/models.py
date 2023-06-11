@@ -1,3 +1,4 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
@@ -23,6 +24,10 @@ class Blog(models.Model):
         verbose_name_plural = "Новости"
         ordering = ['-time_created']
 
+    def reviewers(self):
+        queryset = self.review_set.all().values_list('owner__id', flat=True)
+        return queryset
+
 
 class Category(models.Model):
     name = models.CharField(max_length=255, verbose_name='Категория')
@@ -37,4 +42,19 @@ class Category(models.Model):
     class Meta:
         verbose_name = "Категорию"
         verbose_name_plural = "Категории"
+
+
+class Review(models.Model):
+    owner = models.ForeignKey(User, on_delete=models.CASCADE, null=True, verbose_name='Пользователь')
+    post = models.ForeignKey(Blog, on_delete=models.CASCADE, verbose_name='Пост')
+    text = models.TextField(null=False, blank=False, verbose_name='Комментарий')
+    created = models.DateTimeField(auto_now_add=True, verbose_name='Дата комментария')
+
+    def __str__(self):
+        return self.text
+
+    class Meta:
+        unique_together = [['owner', 'post']]
+
+
 
