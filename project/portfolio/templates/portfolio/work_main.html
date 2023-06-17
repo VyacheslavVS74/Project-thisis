@@ -2,23 +2,25 @@
 
 {% block content %}
 
+
 <section class="work__main">
     <div class="container">
         <div class="contact__text">
-            <h2>{{ work.title }}</h2>
+            <h2>{{ order_works.title }}</h2>
         </div>
+
         <div class="work__main__style">
             <div class="slider__main">
                 <div class="slider">
                     <div class="slider-line">
-                        <img src="{{ work.image_1.url }}" alt="" class="image-work-main">
-                        {% if work.image_2 %}
-                        <img src="{{ work.image_2.url }}" alt="" class="image-work-main">
+                        <img src="{{ order_works.image_1.url }}" alt="" class="image-work-main">
+                        {% if order_works.image_2 %}
+                        <img src="{{ order_works.image_2.url }}" alt="" class="image-work-main">
                         {% else %}
                         <span></span>
                         {% endif %}
-                        {% if work.image_3 %}
-                        <img src="{{ work.image_3.url }}" alt="" class="image-work-main">
+                        {% if order_works.image_3 %}
+                        <img src="{{ order_works.image_3.url }}" alt="" class="image-work-main">
                         {% else %}
                         <span></span>
                         {% endif %}
@@ -28,14 +30,27 @@
                 <button class="slider-next">След &gt;</button>
             </div>
             <div class="work__context">
-                <p>Цена: {{ work.price }} &#8381</p>
-                <p>Материал изделия: {{ work.material }}</p>
-                 <div class="btn"><a href="#">Заказать</a></div>
+                <p>Цена: {{ order_works.price }} &#8381</p>
+                <p>Материал изделия: {{ order_works.material }}</p>
             </div>
         </div>
+
         <div class="description">
             <p class="header__description">ОПИСАНИЕ</p>
-            <p>{{ work.description }}</p>
+            <p>{{ order_works.description }}</p>
+        </div>
+
+
+
+        <div class="order login">
+            <h2>Оставить заявку</h2>
+
+            <form action="" method="post" style="width: 50%" class="bg">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="login__btn" type="submit">оставить заявку</button>
+            </form>
+
         </div>
     </div>
 </section>

@@ -55,6 +55,8 @@ class Review(models.Model):
 
     class Meta:
         unique_together = [['owner', 'post']]
+        verbose_name = "Комментарий"
+        verbose_name_plural = "Комментарии"
 
 
 

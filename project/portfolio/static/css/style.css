@@ -189,8 +189,8 @@ body.lock {
 @media screen and (max-width: 768px) {
     .menu__link {
         display: block;
-        font-size: 30px;
-        line-height: 70px;
+        font-size: 20px;
+        line-height: 50px;
     }
 }
 
@@ -607,13 +607,11 @@ body.lock {
     border-radius: 3px;
     margin: 30px auto;
     margin-bottom: 5px;
-    overflow: hidden;
-    
+    overflow: hidden;    
 }
 .slider img {
     width: 450px;
     z-index: 0;
-
 }
 .slider-line {
     width: 1350px;
@@ -623,6 +621,28 @@ body.lock {
     left: 0;
     transition: all ease 1s;
     
+}
+@media screen and (max-width: 580px) {
+    .slider {
+        width: 300px;
+        border: 2px solid black;
+        border-radius: 3px;
+        margin: 30px auto;
+        margin-bottom: 5px;
+        overflow: hidden;  
+    }
+    .slider img {
+        width: 300px;
+        z-index: 0;
+    }
+    .slider-line {
+        width: 1200px;
+        background: #B5B4B0;
+        display: flex;
+        position: relative;
+        left: 0;
+        transition: all ease 1s;
+    }
 }
 
 .slider-prev, .slider-next {
@@ -646,6 +666,10 @@ body.lock {
     margin-bottom: 0;
     padding-bottom: 25px;
 }
+.work__context p {
+    margin: 10px auto 10px;
+}
+
 /*--------------------/work_main--------------------*/
 
 /*--------------------pagination--------------------*/
@@ -798,9 +822,11 @@ body.lock {
     text-align: center;
     padding-top: 20px;
 }
-/* .post__center p {
-    padding-bottom: 20px;
-} */
+.post__center a {
+    padding: 15px auto 15px;
+    /* text-decoration: none; */
+    color: #000;
+}
 .post__center div {
     align-items: center;
 }
@@ -832,6 +858,9 @@ body.lock {
     background: #CDB6A4;
     margin: 30px auto 30px;
 }
+.login h2 {
+    padding-bottom: 10px;;
+}
 .login__btn {
     background: #fff;
     padding: 12px 15px;
@@ -841,6 +870,9 @@ body.lock {
 }
 .login__btn:hover {
     background: #F3EDDF;
+}
+.form-input {
+    margin: 10px;
 }
 .login a{
     color: #000;
@@ -872,5 +904,13 @@ body.lock {
 .form__comments textarea {
     max-width: 100%;
     min-width: 400px;
+}
+.field__comments, .comment__list, .comment, .comment__info {
+    padding: 10px;
+}
+.comment__list {
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 10px auto 10px;
 }
 /* ------------------/comments----------------- */

@@ -14,4 +14,4 @@ class TopAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Works, WorksAdmin)
-admin.site.register(Top)
+admin.site.register(Top, TopAdmin)

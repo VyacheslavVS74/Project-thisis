@@ -6,9 +6,10 @@
 <div class="post">
     <div class="container">
         <div class="post__center">
-            <p>Категория: {{ post.cat }}</p>
+            <a href="{% url 'blog' %}">Категория: {{ post.cat }}</a>
             <h2>{{ post.title }}</h2>
             <p>{{ post.content|safe }}</p>
+            <h4>{{ post.time_created }}</h4>
             <p class="back"><a href="#" onclick="history.back()"><img src="{% static 'blog/back.png' %}" alt=""></a></p>
         </div>
     </div>
@@ -30,7 +31,7 @@
                 {{ field }}
             </div>
             {% endfor %}
-            <input type="submit" value="Отправить">
+            <input type="submit" value="Отправить" class="login__btn">
         </form>
 
         {% else %}

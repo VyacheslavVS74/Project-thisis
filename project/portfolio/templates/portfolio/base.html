@@ -21,12 +21,12 @@
                     <nav class="menu__body">
                         <ul class="menu__list">
                             <li><a href="{% url 'home' %}" class="menu__link">Главная</a></li>
-                            <li><a href="{% url 'catalog' %}" class="menu__link">Каталог</a></li>
+                            <li><a href="{% url 'catalog' %}" class="menu__link">Наши проекты</a></li>
                             <li><a href="{% url 'about' %}" class="menu__link">О нас</a></li>
                             <li><a href="{% url 'blog' %}" class="menu__link">Блог</a></li>
                             <li><a href="{% url 'contact' %}" class="menu__link">Контакты</a></li>
                             {% if user.is_authenticated %}
-                            <li style="color:#fff">{{ user.username }} | <a href="{% url 'logout' %}" class="menu__link">Выйти</a></li>
+                            <li style="color:#fff; font-size: 18px">{{ user.username }} | <a href="{% url 'logout' %}" class="menu__link">Выйти</a></li>
                             {% else %}
                             <li><a href="{% url 'login' %}" class="menu__link">Войти</a></li>
                             {% endif %}

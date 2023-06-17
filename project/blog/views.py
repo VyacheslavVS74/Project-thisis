@@ -1,7 +1,7 @@
 # from django.views.generic import ListView, DetailView, FormView
 # from .utils import *
 from django.contrib import messages
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, redirect
 
 from .forms import ReviewForm
 from .models import Blog

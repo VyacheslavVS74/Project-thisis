@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'ckeditor',
     'ckeditor_uploader',
-    'phonenumber_field',
+    'crm.apps.CrmConfig',
 ]
 
 MIDDLEWARE = [

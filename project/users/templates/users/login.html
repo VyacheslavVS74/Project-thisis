@@ -6,7 +6,7 @@
 <section class="login">
     <div class="container">
         <form action="{% url 'register' %}" method="post" class="bg">
-            <h1>Регистрация</h1>
+            <h2>Регистрация</h2>
             {% csrf_token %}
             {{ form.as_p }}
             <button class="login__btn">Зарегистрироваться</button>
@@ -19,7 +19,7 @@
     <div class="container">
         <form action="{% url 'login' %}" method="post" class="bg">
             {% csrf_token %}
-            <h1>Авторизация</h1>
+            <h2>Авторизация</h2>
             <div>
                 <label>Логин</label>
                 <input class="form-input" type="text" name="username" placeholder="Username">
