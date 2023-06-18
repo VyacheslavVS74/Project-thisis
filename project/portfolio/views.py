@@ -53,13 +53,14 @@ def work_main(request, pk):
 
 
 # def thanks_page(request):
+#
 #     work_name = Works.objects.first()
 #     if request.method == 'POST':
 #         name = request.POST['name']
 #         phone = request.POST['phone']
-#         email = request.POST['email']
-#         name_work = work_name.title
-#         element = Order(order_work=name_work, order_name=name, order_phone=phone, order_email=email)
+#         email = request.user['email']
+#         order_work = Works.title
+#         element = Order(order_work=work_name, order_name=name, order_phone=phone, order_email=email)
 #         element.save()
 #         return render(request, 'portfolio/thanks.html', {'name': name})
 #     else:

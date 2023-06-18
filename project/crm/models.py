@@ -1,11 +1,9 @@
 from django.db import models
-
 from django.db import models
 from portfolio.models import Works
 
 
 class StatusCrm(models.Model):
-
     status_name = models.CharField(max_length=150, verbose_name='Название статуса')
 
     def __str__(self):
@@ -32,3 +30,16 @@ class Order(models.Model):
     class Meta:
         verbose_name = 'Заказ'
         verbose_name_plural = 'Заказы'
+
+
+class CommentCrm(models.Model):
+    comment_order = models.ForeignKey(Order, on_delete=models.CASCADE, verbose_name='Заявка')
+    comment_text = models.TextField(verbose_name='Текст комментария')
+    comment_dt = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
+
+    def __str__(self):
+        return self.comment_text
+
+    class Meta:
+        verbose_name = 'Комментарий'
+        verbose_name_plural = 'Комментарии'

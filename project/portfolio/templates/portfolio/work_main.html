@@ -44,13 +44,11 @@
 
         <div class="order login">
             <h2>Оставить заявку</h2>
-
             <form action="" method="post" style="width: 50%" class="bg">
                 {% csrf_token %}
                 {{ form.as_p }}
                 <button class="login__btn" type="submit">оставить заявку</button>
             </form>
-
         </div>
     </div>
 </section>

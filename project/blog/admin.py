@@ -22,7 +22,8 @@ class BlogAdmin(admin.ModelAdmin):
     list_editable = ('is_published',)
     list_filter = ('is_published', 'time_created')
     save_on_top = True
-    fields = ('title', 'slug', 'cat', 'content', 'image', 'get_html_image', 'is_published', 'time_created', 'time_update')
+    fields = ('title', 'slug', 'cat', 'content', 'image', 'get_html_image', 'is_published', 'time_created',
+              'time_update')
     readonly_fields = ('get_html_image', 'time_created', 'time_update')
 
     def get_html_image(self, object):
