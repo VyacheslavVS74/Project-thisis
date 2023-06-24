@@ -10,6 +10,9 @@ class OrderForm(forms.ModelForm):
         model = Order
         fields = ['order_works', 'order_name', 'order_phone', 'order_email']
 
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
         # name = forms.CharField(label='Имя', max_length=150,
         #                        widget=forms.TextInput(attrs={'class': 'form-input', 'name': 'first_name'}))
         # phone = forms.CharField(label='Телефон', max_length=150, widget=forms.TextInput(attrs={'class': 'form-input'}))

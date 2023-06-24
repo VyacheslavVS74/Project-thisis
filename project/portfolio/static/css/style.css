@@ -522,7 +522,7 @@ body.lock {
     background: #F3EDDF;
 }
 
-.column input[type=text], .column textarea {
+.column input[type=text], .column textarea, .column input[type=email] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;

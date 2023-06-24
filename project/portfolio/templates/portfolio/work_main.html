@@ -44,10 +44,18 @@
 
         <div class="order login">
             <h2>Оставить заявку</h2>
-            <form action="" method="post" style="width: 50%" class="bg">
+            <form method="POST" style="width: 50%" class="bg">
                 {% csrf_token %}
-                {{ form.as_p }}
-                <button class="login__btn" type="submit">оставить заявку</button>
+                {% if request.user.is_authenticated == False %}
+                    {{ form.as_p }}
+                {% else %}
+                <div>
+
+                    {{ form.order_works }}
+                    {{ form.order_phone }}
+                </div>
+                {% endif %}
+                <button class="login__btn" type="submit">Оставить заявку</button>
             </form>
         </div>
     </div>
