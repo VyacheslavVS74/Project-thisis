@@ -2,7 +2,6 @@
 
 {% block content %}
 
-
 <section class="work__main">
     <div class="container">
         <div class="contact__text">
@@ -40,22 +39,14 @@
             <p>{{ order_works.description }}</p>
         </div>
 
-
-
         <div class="order login">
             <h2>Оставить заявку</h2>
-            <form method="POST" style="width: 50%" class="bg">
+            <form method="POST" class="work_form">
                 {% csrf_token %}
-                {% if request.user.is_authenticated == False %}
-                    {{ form.as_p }}
-                {% else %}
                 <div>
-
-                    {{ form.order_works }}
-                    {{ form.order_phone }}
+                    {{ form.as_p }}
                 </div>
-                {% endif %}
-                <button class="login__btn" type="submit">Оставить заявку</button>
+                <button class="login__btn" type="submit" onclick="history.back()">Оставить заявку</button>
             </form>
         </div>
     </div>

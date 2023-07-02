@@ -2,8 +2,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
-from .forms import RegisterUserForm
 from django.contrib.auth.forms import AuthenticationForm
+from .forms import RegisterUserForm
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
 
@@ -28,32 +28,6 @@ def register_users(request):
         'form': form,
     }
     return render(request, 'users/login.html', context)
-
-# def register_users(request):
-#     if request.method == 'GET':
-#         context = {
-#             'form': RegisterUserForm()
-#         }
-#         return render(request, 'users/register.html', context)
-#     else:
-#         if request.POST['password1'] == request.POST['password2']:
-#             try:
-#                 user = User.objects.create_user(request.POST['username'], password=request.POST['password1'])
-#                 user.save()
-#                 login(request, user)
-#                 return redirect('portfolio')
-#             except IntegrityError:
-#                 context = {
-#                     'form': RegisterUserForm(),
-#                     'error': 'Такое имя пользователя уже существует. Создайте другое'
-#                 }
-#                 return render(request, 'users/register.html', context)
-#         else:
-#             context = {
-#                 'form': RegisterUserForm(),
-#                 'error': 'Пароли не совпадают'
-#             }
-#             return render(request, 'users/register.html', context)
 
 
 def login_users(request):
@@ -81,7 +55,6 @@ def login_users(request):
 
 
 def logout_users(request):
-    # if request.method == 'POST':
     logout(request)
     messages.info(request, 'Вы вышли из аккаунта')
     return redirect('login')

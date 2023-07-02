@@ -28,9 +28,6 @@
   </div>
 </section>
 
-<!--<div class="hr-text">-->
-<!--  ПОПУЛЯРНЫЕ <span style="color: #CBB486">МОДЕЛИ</span>-->
-<!--</div>-->
 <section class="block__works">
   <div class="container">
     <div class="works">
@@ -65,25 +62,15 @@
 
 <section class="form__base">
   <div class="container">
-    <div class="column__base">
-      <form action="">
-        <label for="fname">Введите имя</label>
-        <input type="text" id="fname" name="firstname" placeholder="Ваше имя..">
-        <label for="lname">Введите фамилию</label>
-        <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия..">
-        <label for="subject">Задайте вопрос</label>
-        <textarea id="subject" name="subject" placeholder="Ваше сообщение.."
-                  style="height:170px"></textarea>
-        <input type="submit" value="Отправить">
-        <div>
-          <a href="#" class="personal__home">Нажимая кнопку "Отправить" вы даете согласие на обработку
-            персональной
-            информации</a>
-        </div>
+    <div class="column_home">
+      <p class="cont">ОБРАТНАЯ СВЯЗЬ</p>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="login__btn">Отправить</button>
       </form>
     </div>
   </div>
-
 </section>
 
 

@@ -46,27 +46,12 @@
                 </div>
             </div>
             <div class="column">
-                <p style="text-align: center; color: #000">Обратная связь</p>
+                <p class="cont" >ОБРАТНАЯ СВЯЗЬ</p>
                 <form method="post">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button class="login__btn">Отправить</button>
                 </form>
-<!--                <form action="/action_page.php">-->
-<!--                    <label for="fname">Введите имя</label>-->
-<!--                    <input type="text" id="fname" name="firstname" placeholder="Ваше имя..">-->
-<!--                    <label for="lname">Введите фамилию</label>-->
-<!--                    <input type="text" id="lname" name="lastname" placeholder="Ваша фамилия..">-->
-<!--                    <label for="subject">Задайте вопрос</label>-->
-<!--                    <textarea id="subject" name="subject" placeholder="Ваше сообщение.."-->
-<!--                        style="height:170px"></textarea>-->
-<!--                    <input type="submit" value="Отправить">-->
-<!--                    <div>-->
-<!--                        <a href="#" class="personal" target="_blank">Нажимая кнопку "Отправить" вы даете согласие на обработку-->
-<!--                            персональной-->
-<!--                            информации</a>-->
-<!--                    </div>-->
-<!--                </form>-->
             </div>
         </div>
     </div>

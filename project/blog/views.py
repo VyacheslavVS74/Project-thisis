@@ -1,8 +1,5 @@
-# from django.views.generic import ListView, DetailView, FormView
-# from .utils import *
 from django.contrib import messages
 from django.shortcuts import render, redirect
-
 from .forms import ReviewForm
 from .models import Blog
 from .utils import paginate_blogs
@@ -92,5 +89,3 @@ def blog_category(request, cat_slug):
 #         context['title'] = 'Категория - ' + str(context['posts'][0].cat)
 #         context['cat_selected'] = context['posts'][0].cat_id
 #         return context
-
-

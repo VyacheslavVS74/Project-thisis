@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-
+from phonenumber_field.modelfields import PhoneNumberField
 from django.db import models
 from portfolio.models import Works
 
@@ -16,15 +16,14 @@ class StatusCrm(models.Model):
 
 
 class Order(models.Model):
-    sender = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, blank=True)
+
     order_works = models.ForeignKey(Works, on_delete=models.CASCADE, verbose_name='Работа')
     order_dt = models.DateTimeField(auto_now=True, verbose_name='Дата создания')
-    # order_work = models.CharField(max_length=250, verbose_name='Изделие', null=True)
     order_name = models.CharField(max_length=50, verbose_name='Имя')
-    order_phone = models.CharField(max_length=50, verbose_name='Телефон')
+    order_phone = PhoneNumberField()
     order_email = models.EmailField(max_length=50, null=True, blank=True, verbose_name='Email')
     order_status = models.ForeignKey(StatusCrm, on_delete=models.PROTECT, null=True, blank=True,
-                                     verbose_name='Статус', default=5)
+                                     verbose_name='Статус', default=1)
 
     def __str__(self):
         return self.order_name

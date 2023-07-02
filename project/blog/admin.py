@@ -39,14 +39,10 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display_links = ('id', 'name')
     search_fields = ('name__iregex',)
 
-# class ReviewAdmin(admin.ModelAdmin):
-#
-
 
 admin.site.register(Blog, BlogAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Review)
-
 
 admin.site.site_title = 'Админ панель ProMast'
 admin.site.site_header = 'Админ панель ProMast'

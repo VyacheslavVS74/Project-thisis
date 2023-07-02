@@ -4,9 +4,6 @@
 from django.core.paginator import Paginator
 from .models import Blog
 
-# class DataMixin:
-#     paginate_by = 2
-
 
 def paginate_blogs(request, blogs, results):
     page = request.GET.get('page', 1)
