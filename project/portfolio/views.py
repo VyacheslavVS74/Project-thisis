@@ -62,12 +62,15 @@ def work_main(request, pk):
                           tg_name=form.cleaned_data.get('order_name'),
                           tg_phone=str(form.cleaned_data.get('order_phone')),
                           tg_email=form.cleaned_data.get('order_email'))
-            if form.errors:
-                messages.error(request, 'Данные введены не верно')
-                messages.error(request, form.errors)
-            else:
-                messages.success(request, 'Заявка отправлена')
+            messages.success(request, 'Заявка отправлена')
             return redirect('work-main', pk=order_works.id)
+
+        if form.errors:
+            messages.error(request, 'Данные введены не верно')
+            # messages.error(request, form.errors)
+        else:
+            messages.success(request, 'Заявка отправлена')
+        return redirect('work-main', pk=order_works.id)
 
     context = {
         'order_works': order_works,
